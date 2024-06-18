@@ -75,10 +75,18 @@
             "{{if eq .Code 0}}yellow{{end}}"
           ],
           "style": "plain",
-          "template": " {{ .FormattedMs }}",
+          "template": " {{ .FormattedMs }} |",
           "type": "executiontime",
           "properties": {
             "threshold": 2000
+          }
+        },
+        {
+          "type": "time",
+          "style": "plain",
+          "foreground": "yellow",
+          "properties": {
+            "time_format": "15:04"
           }
         }
       ]

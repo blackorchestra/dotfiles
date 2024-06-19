@@ -106,7 +106,7 @@
           "style": "plain",
           "foreground_templates": [
               "{{if gt .Code 0}}red{{end}}",
-              "{{if eq .Code 0}}p:closer{{end}}"
+              "{{if eq .Code 0}}p:lavender{{end}}"
           ],
           "template": "\uf105 ",
           "type": "text"
@@ -114,10 +114,14 @@
       ]
     }
   ],
+  "secondary_prompt": {
+    "foreground": "p:lavender",
+    "template": " \u2570\u2574\uf105 "
+  },
   "transient_prompt": {
     "foreground_templates": [
       "{{if gt .Code 0}}red{{end}}",
-      "{{if eq .Code 0}}p:closer{{end}}"
+      "{{if eq .Code 0}}p:lavender{{end}}"
     ],
     "background": "transparent",
     "template": "{{ .Shell }}\uf105 "

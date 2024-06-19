@@ -29,7 +29,7 @@ alias ls="eza -a --color=always --git --no-filesize --icons=always --no-time --n
 eval "$(zoxide init zsh)"
 alias cd="z"
 
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+# [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 source /Users/ihor/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 

@@ -5,7 +5,8 @@
     "closer": "p:os",
     "pink": "#F5C2E7",
     "lavender": "#B4BEFE",
-    "blue": "#89B4FA"
+    "blue": "#89B4FA",
+    "grey": "#4A4A59"
   },
   "blocks": [
     {
@@ -13,7 +14,7 @@
       "newline": true,
       "segments": [
         {
-          "foreground": "p:lavender",
+          "foreground": "p:grey",
           "style": "plain",
           "template": "\u256d\u2574",
           "type": "text"
@@ -66,7 +67,7 @@
     },
     {
       "type": "prompt",
-      "filler": "<#4A4A59,transparent>•</>",
+      "filler": "<#4A4A59,transparent>·</>",
       "alignment": "right",
       "segments": [
         {
@@ -97,7 +98,7 @@
       "newline": true,
       "segments": [
         {
-          "foreground": "p:lavender",
+          "foreground": "p:grey",
           "style": "plain",
           "template": "\u2570\u2574",
           "type": "text"

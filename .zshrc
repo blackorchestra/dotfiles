@@ -25,9 +25,9 @@ alias proxmox="ssh root@192.168.31.200"
 alias truenas="ssh root@192.168.31.19"
 alias vim=nvim
 alias cat=bat
-alias ls="eza -a --color=always --git --no-filesize --icons=always --no-time --no-user --no-permissions"
+# alias ls="eza -a --color=always --git --no-filesize --icons=always --no-time --no-user --no-permissions"
 alias powershell="pwsh -NoLogo"
-eval "$(zoxide init zsh)"
+# eval "$(zoxide init zsh)"
 # alias cd="z"
 
 # [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh

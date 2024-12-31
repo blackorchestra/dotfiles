@@ -1,0 +1,131 @@
+{
+  "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
+  "palette": {
+    "os": "#ACB0BE",
+    "closer": "p:os",
+    "pink": "#F5C2E7",
+    "lavender": "#B4BEFE",
+    "blue": "#89B4FA",
+    "grey": "#4A4A59",
+    "peach": "#fab387",
+    "teal": "#94e2d5"
+  },
+  "blocks": [
+    {
+      "alignment": "left",
+      "newline": true,
+      "segments": [
+        {
+          "foreground": "p:grey",
+          "style": "plain",
+          "template": "<b>\u256d\u2574</b>",
+          "type": "text"
+        },
+        {
+          "foreground": "p:os",
+          "style": "plain",
+          "template": "{{.Icon}} ",
+          "type": "os"
+        },
+        {
+          "foreground": "p:teal",
+          "style": "plain",
+          "template": "<b>{{ .UserName }}@{{ .HostName }} </b>",
+          "type": "session"
+        },
+        {
+          "foreground": "p:pink",
+          "properties": {
+            "folder_icon": "<b>..\ue5fe..</b>",
+            "home_icon": "~",
+            "style": "agnoster_short"
+          },
+          "style": "plain",
+          "template": "<b>{{ .Path }} </b>",
+          "type": "path"
+        },
+        {
+          "foreground": "p:lavender",
+          "properties": {
+            "branch_icon": "\ue725 ",
+            "cherry_pick_icon": "\ue29b ",
+            "commit_icon": "\uf417 ",
+            "merge_icon": "\ue727 ",
+            "no_commits_icon": "\uf0c3 ",
+            "rebase_icon": "\ue728 ",
+            "revert_icon": "\uf0e2 ",
+            "tag_icon": "\uf412 ",
+            "fetch_stash_count": true,
+            "fetch_status": true,
+            "fetch_upstream_icon": true,
+            "fetch_worktree_count": true
+          },
+          "template": "<b>{{ .UpstreamIcon }}{{ .HEAD }}{{ if .BranchStatus }} {{ .BranchStatus }}{{ end }}{{ if .Working.Changed }} \uf044 {{ .Working.String }}{{ end }}{{ if and (.Working.Changed) (.Staging.Changed) }} |{{ end }}{{ if .Staging.Changed }} \uf046 {{ .Staging.String }}{{ end }}{{ if gt .StashCount 0 }} \ueb4b {{ .StashCount }}{{ end }} </b>",
+          "style": "plain",
+          "type": "git"
+        }
+      ],
+      "type": "prompt"
+    },
+    {
+      "type": "prompt",
+      "filler": "<#4A4A59,transparent>·</>",
+      "alignment": "right",
+      "segments": [
+        {
+          "foreground_templates": [
+            "{{if gt .Code 0}}red{{end}}",
+            "{{if eq .Code 0}}p:peach{{end}}"
+          ],
+          "style": "plain",
+          "template": "<b> {{ .FormattedMs }} |</b>",
+          "type": "executiontime",
+          "properties": {
+            "threshold": 2000
+          }
+        },
+        {
+					"type": "text",
+          "style": "plain",
+					"template": "<b> \uebca {{ .Shell }} </b>",
+          "foreground": "p:peach"
+        }
+      ]
+    },
+    {
+      "type": "prompt",
+      "alignment": "left",
+      "newline": true,
+      "segments": [
+        {
+          "foreground": "p:grey",
+          "style": "plain",
+          "template": "<b>\u2570\u2574</b>",
+          "type": "text"
+        },
+        {
+          "style": "plain",
+          "foreground_templates": [
+              "{{if gt .Code 0}}red{{end}}",
+              "{{if eq .Code 0}}p:lavender{{end}}"
+          ],
+          "template": "<b>\uf105 </b>",
+          "type": "text"
+        }
+      ]
+    }
+  ],
+  "secondary_prompt": {
+    "foreground": "p:lavender",
+    "template": "<b> \u2570\u2574\uf105 </b>"
+  },
+  "transient_prompt": {
+    "foreground_templates": [
+      "{{if gt .Code 0}}red{{end}}",
+      "{{if eq .Code 0}}p:lavender{{end}}"
+    ],
+    "background": "transparent",
+    "template": "<b>{{ .Shell }}\uf105 </b>"
+  },
+  "version": 2
+}
